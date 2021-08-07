@@ -56,8 +56,8 @@ returnBtn.addEventListener("click", function(){
 
  function showimage(){
     const number = Math.floor(Math.random() * size); 
-    imgs[number].classList.add('show');
     addEffect(imgs[number]);
+    imgs[number].classList.add('show');
  }
 
  function hideImage(){
@@ -87,23 +87,23 @@ returnBtn.addEventListener("click", function(){
  }
 
 
-
+/*
  setInterval(function(){ 
     hideImage();
     showimage();
- }, 3000);
+ }, 1800);
 
  setTimeout(function(){ 
     showimage();
- }, 1500);
+ }, 800);
 
  setTimeout(function(){ 
     logo.classList.add("show");  
     setTimeout(function(){
         showSocials(0);
-    }, 3000);
- }, 6000);
-
+    }, 1500);
+ }, 5000);
+*/
 
  function showSocials(index){
     if(index < socials.length){

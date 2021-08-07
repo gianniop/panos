@@ -174,7 +174,7 @@ header .logo.show{
     opacity: 1;
     animation: scaleBtn;
     animation-duration: 2.5s;
-    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
 }
 .play-btn:hover{
     color: #ffd700;
@@ -195,35 +195,35 @@ header .logo.show{
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 30% 25% 10% 1fr;
-    grid-template-rows: 40vh 20vh 15vh 1fr;
+    grid-template-columns: 5% 35% 20% 20% 15% 1fr;
+    grid-template-rows: 25vh 15vh 25vh 10vh 1fr;
     position: relative;
     overflow: hidden;
 }
 
 .img-grid > .left-img{
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/-1;
 }
 .img-grid > .left-top-img{
-    grid-column: 2/3;
-    grid-row: 1/3;
+    grid-column: 2/4;
+    grid-row: 1/4;
 }
 .img-grid > .center-img{
-    grid-column: 2/4;
+    grid-column: 1/4;
     grid-row: 3/-1;
 }
 .img-grid > .right-img{
-    grid-column: -2/-1;
+    grid-column: 4/-1;
     grid-row: 2/-1;
 }
 .img-grid > .right-top-img{
-    grid-column: 3/-1;
-    grid-row: 1/2;
+    grid-column: 4/-1;
+    grid-row: 1/3;
 }
-.img-grid > .right-btn-img{
-    grid-column: 3/4;
-    grid-row: 2/-1;
+.img-grid > .right-btm-img{
+    grid-column: 3/5;
+    grid-row: 1/-2;
 }
 
 .img-grid .grid-cover{
@@ -303,9 +303,25 @@ header .logo.show{
     position: relative;
 }
 
+.playlist-container .header h3{
+    color: #000;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #fff;
+    letter-spacing: -3.56px;
+    width: 350px;
+    padding: 1rem;
+    line-height: 30px;
+    margin-bottom: 1rem;
+    position: absolute;
+    left:3rem;
+    top: 2rem;
+}
+
 .playlist-container .header .logo{
     width: 400px;
-    padding: 1rem 0;
+    padding-top: 1rem;
     margin: 0 auto;
 }
 
@@ -315,7 +331,7 @@ header .logo.show{
     padding: 0.5rem 1rem;
     position: absolute;
     right: 2rem;
-    top: 2rem;
+    top: 3rem;
     cursor: pointer;
 }
 
@@ -337,18 +353,7 @@ header .logo.show{
 .playlist-main{
     padding: 0 3rem;
 }
-.playlist-main h3{
-    color: #000;
-    font-size: 45px;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: #fff;
-    letter-spacing: -3.56px;
-    width: 350px;
-    padding: 1rem;
-    line-height: 30px;
-    margin-bottom: 1rem;
-}
+
 
 .playlist-main ul.playlist{
     /*
@@ -482,4 +487,107 @@ header .logo.show{
 }
 .close span.close-line:last-of-type{
     transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1380px) {
+    .playlist-container .header h3{
+        width: 280px;
+    }
+    .playlist-main ul.playlist li .info {
+      width: 50%;
+    }
+    .playlist-main ul.playlist li .cover-img-wrapper {
+        width : 45%;
+    }
+  }
+
+  
+@media screen and (max-width: 1120px) {
+    .playlist-container .header{
+        margin-bottom: 110px;
+    }
+    .playlist-container .header h3{
+        width: 380px;
+        top: 10rem
+    }
+}
+
+
+
+@media screen and (max-width: 980px) {
+    .playlist-main ul.playlist li .info {
+        width: 100%;
+      }
+      .playlist-main ul.playlist li .cover-img-wrapper {
+          display: none;
+      }
+      .playlist-main ul.playlist li:hover .cover-img-wrapper{
+        display: none;
+    }    
+}
+
+@media screen and (max-width: 780px) {
+    .playlist-container .header .logo{
+        margin:0 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .playlist-container .header .logo{
+        width: 300px;
+        margin-left: 25px;
+    }
+    .playlist-container .header h3{
+        top: 8rem;
+        left: 25px;
+    }
+    .playlist-main{
+        padding: 0 25px;
+    }
+    .playlist-main ul.playlist li{
+        font-size: 16px;
+    }
+    .footer{
+        flex-direction: column;
+        padding:1rem 25px;
+    }
+    .footer .logo{
+        margin-bottom: 15px;
+    }
+    .footer .developer{
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .playlist-container .header .logo{
+        width: 250px;
+    }
+    .playlist-container .header .return{
+        top: 2rem;
+        right: 25px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .playlist-container .header h3{
+        width: 100%;
+        left: 0;
+        font-size:36px;
+    }
+    .footer .social li{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 430px) {
+    .playlist-container .header .logo{
+        margin: 0 auto;
+    }
+    .playlist-container .header h3{
+        top: 10rem;
+    }
+    .playlist-container .header .return{
+        top: 6rem;
+    }
 }
