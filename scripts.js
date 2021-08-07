@@ -87,7 +87,7 @@ returnBtn.addEventListener("click", function(){
  }
 
 
-/*
+
  setInterval(function(){ 
     hideImage();
     showimage();
@@ -103,7 +103,7 @@ returnBtn.addEventListener("click", function(){
         showSocials(0);
     }, 1500);
  }, 5000);
-*/
+
 
  function showSocials(index){
     if(index < socials.length){
